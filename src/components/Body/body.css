@@ -3,8 +3,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
-  padding: 80px 50px;
+  min-height: 100vh;
+  padding: 80px 342px;
 }
 
 .__is {

@@ -2,6 +2,7 @@ import tickCircle from "../../assets/tick-circle.svg";
 import customers from "../../assets/customers.svg";
 import stars from "../../assets/star-fill.svg";
 import "./body.css";
+import Form from "./form";
 
 const Body = () => {
   return (
@@ -40,6 +41,7 @@ const Body = () => {
           <div className="__1275">1275 Satisfied Customer</div>
         </div>
       </div>
+      <Form />
     </div>
   );
 };
