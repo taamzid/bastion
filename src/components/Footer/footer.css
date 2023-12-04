@@ -24,8 +24,13 @@ h1 {
   margin-top: 20px;
 }
 p {
-  width: 50%;
+  width: 60%;
   align-items: center;
   text-align: center;
   margin: auto;
+  color: #fff;
+}
+.reserved {
+  margin-top: 38px;
+  color: #fff;
 }
