@@ -1,0 +1,65 @@
+.__body {
+  background-image: url("../../assets/bodyImage.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 80px 50px;
+}
+
+.__is {
+  font-family: "Cera Pro Regular";
+  font-size: 81px;
+  font-weight: 700;
+  color: #fdfbf7;
+  text-align: center;
+}
+
+.__claim {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fdfbf7;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.__compare {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  min-width: 342px;
+  gap: 12px;
+  background-color: rgba(56, 85, 60, 0.25);
+  padding: 16px;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fdfbf7;
+}
+
+.__cnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.__customers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 43px;
+  gap: 16px;
+}
+
+.__stars {
+  display: flex;
+  gap: 5px;
+}
+
+.__1275 {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #517756;
+}
