@@ -9,10 +9,3 @@ body {
     url("../src/fonts/Fontspring-DEMO-cerapro-regular.otf") format("truetype");
   font-weight: normal;
 }
-
-@font-face {
-  font-family: "Cera Pro Thin";
-  src: local("Cera Pro Thin"),
-    url("../src/fonts/Fontspring-DEMO-cerapro-thin.otf") format("truetype");
-  font-weight: thin;
-}
