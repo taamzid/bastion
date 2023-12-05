@@ -25,8 +25,8 @@ const Footer = () => {
         before making any decision in relation to your particular requirements
         or circumstances.Before <br />
         acquiring any financial product, you should obtain the relevant Product
-        Disclosure Statement (PDS) for any product mentioned and consider its
-        contents before making any <br />
+        Disclosure Statement <span className="__span">(PDS)</span> for any
+        product mentioned and consider its contents before making any <br />
         decision. Past performance of any product discussed on this website is
         not indicative of future performance. We do not warrant that any future
         forecasts are guaranteed to occur.
