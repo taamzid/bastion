@@ -1,36 +1,32 @@
-.footer-container {
-  position: relative;
-  text-align: center;
-}
-
-.footer-background {
-  width: 100%;
-  height: auto;
-}
-
-.logo-container {
-  position: absolute;
-  top: 20%;
-  text-align: center;
-}
-
-.logo {
-  max-width: 80%;
-}
-
-h1 {
+.__footer {
+  padding: 65px 0 65px 0;
+  background-color: #23322c;
   color: #fff;
-  font-size: 1.5rem;
-  margin-top: 20px;
 }
-p {
-  width: 60%;
+
+.__logo__div {
+  display: flex;
   align-items: center;
-  text-align: center;
-  margin: auto;
-  color: #fff;
+  justify-content: center;
 }
-.reserved {
+
+.__vastion {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 48px;
+}
+
+.__vastion__private {
+  margin-top: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.__reserved {
   margin-top: 38px;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
 }
