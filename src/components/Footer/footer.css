@@ -30,3 +30,10 @@
   font-weight: 400;
   text-align: center;
 }
+
+.__span {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=PT+Sans&family=Poppins:wght@300&family=Roboto:wght@400;700&display=swap");

@@ -9,9 +9,11 @@ const Footer = () => {
       </div>
       <div className="__vastion">Vastion Private Wealth PTY LTD © 2023</div>
       <div className="__vastion__private">
-        Vastion Private Wealth PTY LTD (ABN: 19 673 234 181) is a Corporate
-        Authorised Representative of Superfast AM Pty Ltd (ACN: 111 281 013;
-        AFSL No. 283 043). <br /> <br />
+        Vastion Private Wealth PTY LTD{" "}
+        <span className="__span">(ABN: 19 673 234 181)</span> is a Corporate
+        Authorised Representative of Superfast AM Pty Ltd{" "}
+        <span className="__span">(ACN: 111 281 013; AFSL No. 283 043)</span>.{" "}
+        <br /> <br />
         The information provided on and made available through this website is
         general in nature and has been prepared without taking into account your
         objectives, financial situation <br /> or needs – it may not be
