@@ -5,10 +5,10 @@
   background-size: cover;
   min-height: 100vh;
   padding: 80px 342px;
+  font-family: "Cera Pro";
 }
 
 .__is {
-  font-family: "Cera Pro Regular";
   font-size: 81px;
   font-weight: 700;
   color: #fdfbf7;
