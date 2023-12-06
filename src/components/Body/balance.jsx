@@ -1,18 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "./form.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import tickIcon from "../../assets/tick-circleBody.svg";
 import { useNavigate } from "react-router-dom";
 import BodyBg from "./bodyBg";
+import DataContext from "../ContextAPI/dataContext";
 
 const Balance = () => {
   const navigate = useNavigate();
+  const { setSelectedBalance } = useContext(DataContext);
   const [selectedOption, setSelectedOption] = useState(null);
   const completed = 30;
 
-  const handleOptionClick = (index) => {
+  const handleOptionClick = (index, balance) => {
     setSelectedOption(index);
+    setSelectedBalance(balance);
     setTimeout(() => {
       navigate("/age");
     }, 500);
@@ -44,7 +47,7 @@ const Balance = () => {
               className={`__options__balance ${
                 selectedOption === index ? "selected" : ""
               }`}
-              onClick={() => handleOptionClick(index)}
+              onClick={() => handleOptionClick(index, option)}
             >
               {option}
               {selectedOption === index && (

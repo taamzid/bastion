@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./form.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
@@ -6,8 +6,10 @@ import BodyBg from "./bodyBg";
 import checkIcon from "../../assets/check-lg.svg";
 import refreshIcon from "../../assets/refresh.svg";
 import { useNavigate } from "react-router-dom";
+import DataContext from "../ContextAPI/dataContext";
 
 const Processing = () => {
+  const { selectedBalance } = useContext(DataContext);
   const navigate = useNavigate();
   const completed = 90;
   const completedOne = 100;
@@ -62,10 +64,17 @@ const Processing = () => {
   useEffect(() => {
     if (allProcessesCompleted) {
       setTimeout(() => {
-        navigate("/process-done");
+        if (
+          selectedBalance === "$0 - $50,000" ||
+          selectedBalance === "$50,000 - $100,000"
+        ) {
+          navigate("/process-failed");
+        } else {
+          navigate("/process-done");
+        }
       }, 500);
     }
-  }, [allProcessesCompleted, navigate]);
+  }, [allProcessesCompleted, navigate, selectedBalance]);
 
   return (
     <div className="__body">

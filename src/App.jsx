@@ -9,22 +9,25 @@ import Concern from "./components/Body/concern";
 import Processing from "./components/Body/processing";
 import ProcessDone from "./components/Body/processDone";
 import ProcessFailed from "./components/Body/processFailed";
+import DataContextProvider from "./components/ContextAPI/dataContextProvider";
 
 function App() {
   return (
     <div>
       <Router>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Body />} />
-          <Route path="/balance" element={<Balance />} />
-          <Route path="/age" element={<Age />} />
-          <Route path="/state" element={<State />} />
-          <Route path="/concern" element={<Concern />} />
-          <Route path="/processing" element={<Processing />} />
-          <Route path="/process-done" element={<ProcessDone />} />
-          <Route path="/process-failed" element={<ProcessFailed />} />
-        </Routes>
+        <DataContextProvider>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Body />} />
+            <Route path="/balance" element={<Balance />} />
+            <Route path="/age" element={<Age />} />
+            <Route path="/state" element={<State />} />
+            <Route path="/concern" element={<Concern />} />
+            <Route path="/processing" element={<Processing />} />
+            <Route path="/process-done" element={<ProcessDone />} />
+            <Route path="/process-failed" element={<ProcessFailed />} />
+          </Routes>
+        </DataContextProvider>
       </Router>
       <Footer />
     </div>
