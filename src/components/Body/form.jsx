@@ -4,14 +4,20 @@ import "./form.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import tickIcon from "../../assets/tick-circleBody.svg";
+import { useNavigate } from "react-router-dom";
 
 const Form = () => {
+  const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState(null);
+
   const [selectedDropdownOption, setSelectedDropdownOption] = useState("");
-  const completed = 20;
+  const completed = 15;
 
   const handleOptionClick = (index) => {
     setSelectedOption(index);
+    setTimeout(() => {
+      navigate("/balance");
+    }, 500);
   };
 
   const handleDropdownChange = (event) => {
