@@ -11,24 +11,36 @@ const Age = () => {
   const [age, setAge] = useState("");
   const [isUnder18, setIsUnder18] = useState(false);
   const [isBlank, setIsBlank] = useState(false);
+  const [isNotNumber, setIsNotNumber] = useState(false);
+  const completed = 45;
 
   const handleNextClick = () => {
     if (age.trim() === "") {
       setIsBlank(true);
       setIsUnder18(false);
+      setIsNotNumber(false);
       return;
     }
 
-    if (parseInt(age, 10) < 18) {
+    const parsedAge = parseInt(age, 10);
+
+    if (isNaN(parsedAge)) {
+      setIsNotNumber(true);
+      setIsBlank(false);
+      setIsUnder18(false);
+      return;
+    }
+
+    if (parsedAge < 18) {
       setIsUnder18(true);
+      setIsNotNumber(false);
       setIsBlank(false);
     } else {
       setIsUnder18(false);
+      setIsNotNumber(false);
       navigate("/state");
     }
   };
-
-  const completed = 45;
 
   return (
     <div className="__body">
@@ -62,6 +74,9 @@ const Age = () => {
           <div className="__error__message">
             You must be 18 or older to proceed.
           </div>
+        )}
+        {isNotNumber && (
+          <div className="__error__message">Please enter a valid number.</div>
         )}
         {isBlank && (
           <div className="__error__message">Age can not be empty.</div>
