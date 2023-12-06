@@ -50,4 +50,13 @@ body .__form__body {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  border: #23322c 1 px solid;
+  font-size: 16px;
+}
+.__dropdown select {
+  padding: 22px;
+  background-color: #d5dad2;
+  margin-top: 21px;
+  width: 962px;
+  height: 65px;
 }
