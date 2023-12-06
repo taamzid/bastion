@@ -1,16 +1,17 @@
-// Form.jsx
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./form.css";
 import ProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import tickIcon from "../../assets/tick-circleBody.svg";
+import dropDown from "../../assets/arrow-down.svg";
 import { useNavigate } from "react-router-dom";
 
 const Form = () => {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState(null);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const dropdownRef = useRef(null);
 
-  const [selectedDropdownOption, setSelectedDropdownOption] = useState("");
   const completed = 15;
 
   const handleOptionClick = (index) => {
@@ -20,9 +21,28 @@ const Form = () => {
     }, 500);
   };
 
-  const handleDropdownChange = (event) => {
-    setSelectedDropdownOption(event.target.value);
+  const handleDropdownOptionClick = () => {
+    setTimeout(() => {
+      navigate("/balance");
+    }, 500);
   };
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+
+  const closeDropdown = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeDropdown);
+    return () => {
+      document.removeEventListener("click", closeDropdown);
+    };
+  }, []);
 
   const dropdownOptions = [
     "Please Select Other Super Funds Here",
@@ -143,22 +163,30 @@ const Form = () => {
           </div>
         ))}
       </div>
-      <div className="__dropdown">
-        <select
-          className="dropdown"
-          value={selectedDropdownOption}
-          onChange={handleDropdownChange}
-        >
-          <option value="" disabled>
-            Please select other funds option
-          </option>
-          {dropdownOptions.map((option, index) => (
-            <option key={index} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
+      <div
+        className="__dropdown__arrow"
+        onClick={(e) => {
+          toggleDropdown();
+          e.stopPropagation();
+        }}
+        style={{ cursor: "pointer" }}
+      >
+        <div>Please select other super funds here</div>
+        <img src={dropDown} alt="dropDown" />
       </div>
+      {isDropdownVisible && (
+        <div className="__dropdown" ref={dropdownRef}>
+          {dropdownOptions.map((option, index) => (
+            <div
+              key={index}
+              className="__dropdown-option"
+              onClick={handleDropdownOptionClick}
+            >
+              {option}
+            </div>
+          ))}
+        </div>
+      )}
       <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
     </div>
   );
