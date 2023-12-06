@@ -10,10 +10,24 @@ body .__form__body {
   position: relative;
 }
 
+.__form__body__failed {
+  background-color: #fdfbf7;
+  margin: 0 auto;
+  padding: 80px 0 80px 0;
+}
+
 .__select {
   font-size: 32px;
   font-weight: 700;
   margin-top: 40px;
+  text-align: center;
+}
+
+.__select__concern {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 40px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -36,6 +50,25 @@ body .__form__body {
   margin-top: 32px;
 }
 
+.__select__options__state {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.__select__options__concern {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 460px;
+}
+
 .__arrowIcon {
   position: absolute;
   top: -18%;
@@ -51,3 +84,158 @@ body .__form__body {
   justify-content: center;
   gap: 8px;
 }
+
+.__options__balance {
+  font-family: "Inter", sans-serif;
+  background-color: #23322c;
+  padding: 20px 56px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.__options__balance.selected {
+  background-color: #fdfbf7;
+  color: #23322c;
+  border: 1px solid #23322c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.__why {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.__why__we {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+
+.__age__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.__your {
+  padding: 20px 56px;
+  background-color: #23322c;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.__input {
+  padding: 20px 56px;
+  background-color: #d5dad2;
+  color: #23322c;
+  font-size: 20px;
+  font-weight: 500;
+  border: 1px solid #23322c;
+}
+
+.__next {
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #38553c;
+  color: #fff;
+  max-width: 241px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.__error__message {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(205, 44, 44);
+  margin-top: 10px;
+}
+
+.__process__done {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.__process__failed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.__processBar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.__barIcon {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.__sorry {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 13px 0 16px 0;
+}
+
+.__unfortunately {
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.__some {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 708px;
+  margin: 0 auto;
+}
+
+.__alternative {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 16px;
+}
+
+.__speak {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  line-height: 32px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=PT+Sans&family=Poppins:wght@300&family=Roboto:wght@400;700&display=swap");
