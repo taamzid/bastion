@@ -1,9 +1,9 @@
 body .__form__body {
-  margin-top: 51px;
+  margin-top: 40px;
 }
 
 .__form__body {
-  padding: 80px 130px;
+  padding: 60px 50px;
   background-color: #fdfbf7;
   max-width: 1196px;
   margin: 0 auto;
@@ -17,9 +17,9 @@ body .__form__body {
 }
 
 .__select {
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -71,8 +71,10 @@ body .__form__body {
 
 .__arrowIcon {
   position: absolute;
-  top: -18%;
-  left: 5%;
+  top: -7%;
+  left: 10%;
+  min-width: 74px;
+  max-height: 100px;
 }
 
 .__options.selected {
@@ -89,7 +91,7 @@ body .__form__body {
 
 .__dropdown {
   position: absolute;
-  min-width: 78.3%;
+  min-width: 91.6%;
   max-height: 300px;
   overflow-y: auto;
   background-color: #fff;
@@ -282,7 +284,7 @@ body .__form__body {
 .progress {
   --bs-progress-bar-bg: #507b1c !important;
   --bs-progress-bg: rgba(56, 85, 60, 0.2) !important;
-  --bs-progress-height: 24px !important;
+  --bs-progress-height: 20px !important;
   border-radius: 100px !important;
 }
 
@@ -344,7 +346,7 @@ body .__form__body {
   }
 
   .__arrowIcon {
-    top: -5%;
+    top: -3%;
     left: 38%;
     min-width: 74px;
     max-height: 103px;
@@ -460,7 +462,23 @@ body .__form__body {
 
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
   .__dropdown {
-    min-width: 40%;
+    min-width: 89.7%;
+  }
+
+  .__options {
+    padding: 15px 20px;
+    font-size: 18px;
+  }
+
+  .__select__options {
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .__form__body {
+    padding: 60px 40px;
+    background-color: #fdfbf7;
+    max-width: 1196px;
   }
 }
 

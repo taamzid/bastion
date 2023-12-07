@@ -4,34 +4,34 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
-  padding: 80px 342px;
+  padding: 20px 342px 60px;
   font-family: "Cera Pro";
 }
 
 .__is {
-  font-size: 81px;
+  font-size: 60px;
   font-weight: 700;
   color: #fdfbf7;
   text-align: center;
 }
 
 .__claim {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
   color: #fdfbf7;
   text-align: center;
-  margin-top: 26px;
+  margin-top: 20px;
 }
 
 .__compare {
   display: flex;
   align-items: center;
   justify-content: start;
-  min-width: 342px;
+  min-width: 340px;
   gap: 12px;
   background-color: rgba(56, 85, 60, 0.25);
-  padding: 16px;
-  margin-top: 40px;
+  padding: 14px;
+  margin-top: 20px;
   font-size: 18px;
   font-weight: 400;
   color: #fdfbf7;
@@ -64,13 +64,19 @@
   color: #517756;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .__body {
+    padding: 20px 250px 60px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .__body {
     background-image: url("../../assets/bgMobile.svg");
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
+    min-height: 65vh;
     padding: 40px 18px;
   }
 
