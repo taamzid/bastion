@@ -1,18 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import "./form.css";
-import ProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import tickIcon from "../../assets/tick-circleBody.svg";
 import dropDown from "../../assets/arrow-down.svg";
 import { useNavigate } from "react-router-dom";
+import ProgressBar from "react-bootstrap/ProgressBar";
 
 const Form = () => {
   const navigate = useNavigate();
   const [selectedOption, setSelectedOption] = useState(null);
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const dropdownRef = useRef(null);
-
-  const completed = 15;
 
   const handleOptionClick = (index) => {
     setSelectedOption(index);
@@ -130,13 +128,7 @@ const Form = () => {
 
   return (
     <div className="__form__body">
-      <ProgressBar
-        completed={completed}
-        isLabelVisible={false}
-        bgColor="#507B1C"
-        baseBgColor="rgba(56, 85, 60, 0.20)"
-        height="24px"
-      />
+      <ProgressBar animated now={15} />
       <div className="__select">Select Your Super Fund To Begin</div>
       <div className="__select__options">
         {[

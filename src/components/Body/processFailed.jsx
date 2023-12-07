@@ -10,7 +10,7 @@ const ProcessFailed = () => {
       </div>
       <div>
         <div className="__sorry">
-          Sorry <br /> You did not qualify.
+          Sorry, <br /> You did not qualify.
         </div>
         <div className="__unfortunately">
           Unfortunately, we're not able to help you at this time. This may be

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import "./form.css";
-import ProgressBar from "@ramonak/react-progress-bar";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import RamonakProgressBar from "@ramonak/react-progress-bar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import BodyBg from "./bodyBg";
 import checkIcon from "../../assets/check-lg.svg";
@@ -9,9 +10,9 @@ import { useNavigate } from "react-router-dom";
 import DataContext from "../Context/dataContext";
 
 const Processing = () => {
+  const isSmallScreen = window.innerWidth <= 767;
   const { selectedBalance } = useContext(DataContext);
   const navigate = useNavigate();
-  const completed = 90;
   const completedOne = 100;
 
   const [allProcessesCompleted, setAllProcessesCompleted] = useState(false);
@@ -77,57 +78,107 @@ const Processing = () => {
   }, [allProcessesCompleted, navigate, selectedBalance]);
 
   return (
-    <div className="__body">
-      <BodyBg />
-      <div className="__form__body">
-        <div style={{ marginTop: "20px" }}></div>
-        <ProgressBar
-          completed={completed}
-          isLabelVisible={false}
-          bgColor="#507B1C"
-          baseBgColor="rgba(56, 85, 60, 0.20)"
-          height="24px"
-        />
-        <div className="__select">Processing...Hold Tight</div>
-        <div style={{ marginBottom: "40px" }}></div>
-        <div
-          style={{
-            display: "grid",
-            alignItems: "center",
-            justifyItems: "center",
-            gap: "25px",
-          }}
-        >
-          {progressBars.map((bar, index) => (
-            <div key={index} className="__processBar">
-              <div>{bar.label}</div>
-              <div className="__barIcon">
-                <div>
-                  <ProgressBar
-                    completed={bar.completed}
-                    transitionDuration="5s"
-                    isLabelVisible={false}
-                    animateOnRender={true}
-                    bgColor="#507B1C"
-                    baseBgColor="rgba(56, 85, 60, 0.20)"
-                    height="5px"
-                    width="244px"
-                  />
+    <>
+      {isSmallScreen ? (
+        <>
+          <div className="__body">
+            <BodyBg />
+          </div>
+          <div className="__form__body">
+            <div style={{ marginTop: "20px" }}></div>
+            <ProgressBar animated now={90} />
+            <div className="__select">Processing...Hold Tight</div>
+            <div style={{ marginBottom: "40px" }}></div>
+            <div
+              style={{
+                display: "grid",
+                alignItems: "center",
+                justifyItems: "center",
+                gap: "25px",
+              }}
+            >
+              {progressBars.map((bar, index) => (
+                <div key={index} className="__processBar">
+                  <div>{bar.label}</div>
+                  <div className="__barIcon">
+                    <div>
+                      <RamonakProgressBar
+                        completed={bar.completed}
+                        transitionDuration="5s"
+                        isLabelVisible={false}
+                        animateOnRender={true}
+                        bgColor="#507B1C"
+                        baseBgColor="rgba(56, 85, 60, 0.20)"
+                        height="5px"
+                        width="290px"
+                      />
+                    </div>
+                    {!bar.showCheckIcon && (
+                      <img src={refreshIcon} alt="refreshIcon" />
+                    )}
+                    {bar.showCheckIcon && (
+                      <img src={checkIcon} alt="checkIcon" />
+                    )}
+                  </div>
                 </div>
-                {!bar.showCheckIcon && (
-                  <img src={refreshIcon} alt="refreshIcon" />
-                )}
-                {bar.showCheckIcon && <img src={checkIcon} alt="checkIcon" />}
-              </div>
+              ))}
             </div>
-          ))}
+            <div className="__next" style={{ marginTop: "50px" }}>
+              {allProcessesCompleted ? "Done" : "Processing..."}
+            </div>
+            <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
+          </div>
+        </>
+      ) : (
+        <div className="__body">
+          <BodyBg />
+          <div className="__form__body">
+            <div style={{ marginTop: "20px" }}></div>
+            <ProgressBar animated now={90} />
+            <div className="__select">Processing...Hold Tight</div>
+            <div style={{ marginBottom: "40px" }}></div>
+            <div
+              style={{
+                display: "grid",
+                alignItems: "center",
+                justifyItems: "center",
+                gap: "25px",
+              }}
+            >
+              {progressBars.map((bar, index) => (
+                <div key={index} className="__processBar">
+                  <div>{bar.label}</div>
+                  <div className="__barIcon">
+                    <div>
+                      <RamonakProgressBar
+                        completed={bar.completed}
+                        transitionDuration="5s"
+                        isLabelVisible={false}
+                        animateOnRender={true}
+                        bgColor="#507B1C"
+                        baseBgColor="rgba(56, 85, 60, 0.20)"
+                        height="5px"
+                        width="244px"
+                      />
+                    </div>
+                    {!bar.showCheckIcon && (
+                      <img src={refreshIcon} alt="refreshIcon" />
+                    )}
+                    {bar.showCheckIcon && (
+                      <img src={checkIcon} alt="checkIcon" />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="__next" style={{ marginTop: "50px" }}>
+              {allProcessesCompleted ? "Done" : "Processing..."}
+            </div>
+            <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
+          </div>
         </div>
-        <div className="__next" style={{ marginTop: "50px" }}>
-          {allProcessesCompleted ? "Done" : "Processing..."}
-        </div>
-        <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 

@@ -63,3 +63,49 @@
   font-weight: 400;
   color: #517756;
 }
+
+@media only screen and (max-width: 767px) {
+  .__body {
+    /* background-image: url("../../assets/bodyImage.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    min-height: 70vh;
+    padding: 40px 18px;
+  }
+
+  .__is {
+    font-size: 42px;
+  }
+
+  .__claim {
+    font-size: 20px;
+    font-weight: 400;
+    color: #fdfbf7;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 40px;
+  }
+
+  .__compare {
+    min-width: 0;
+    gap: 8px;
+    padding: 12px;
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .__cnt {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .__customers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0 40px 0;
+    gap: 16px;
+  }
+}

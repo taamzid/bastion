@@ -3,11 +3,24 @@ import Form from "./form";
 import BodyBg from "./bodyBg";
 
 const Body = () => {
+  const isSmallScreen = window.innerWidth <= 767;
+
   return (
-    <div className="__body">
-      <BodyBg />
-      <Form />
-    </div>
+    <>
+      {isSmallScreen ? (
+        <>
+          <div className="__body">
+            <BodyBg />
+          </div>
+          <Form />
+        </>
+      ) : (
+        <div className="__body">
+          <BodyBg />
+          <Form />
+        </div>
+      )}
+    </>
   );
 };
 

@@ -1,16 +1,16 @@
 import "./navBar.css";
-import logo1 from "../../assets/logo1.svg";
+import vastionLogo from "../../assets/vastion__logo.svg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <>
-      <div className="nav-container">
+      <div className="__nav-container">
         <Link to="/">
-          <img src={logo1} alt="logo1" />
+          <img src={vastionLogo} alt="vastionLogo" />
         </Link>
       </div>
-      <div className="line"></div>
+      <div className="__line"></div>
     </>
   );
 };
