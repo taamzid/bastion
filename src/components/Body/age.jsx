@@ -42,6 +42,12 @@ const Age = () => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleNextClick();
+    }
+  };
+
   return (
     <div className="__body">
       <BodyBg />
@@ -54,7 +60,7 @@ const Age = () => {
           baseBgColor="rgba(56, 85, 60, 0.20)"
           height="24px"
         />
-        <div className="__select">Select Enter Your Age</div>
+        <div className="__select">Please Enter Your Age</div>
         <div className="__why">
           <div className="__why__we">
             <div>Why we need your age?</div>
@@ -68,6 +74,7 @@ const Age = () => {
             onChange={(e) => setAge(e.target.value)}
             placeholder="Please enter your age"
             className="__input"
+            onKeyPress={handleKeyPress}
           />
         </div>
         {isUnder18 && (
