@@ -5,7 +5,7 @@ import arrowImage from "../../assets/arrowIcon.svg";
 import tickIcon from "../../assets/tick-circleBody.svg";
 import { useNavigate } from "react-router-dom";
 import BodyBg from "./bodyBg";
-import DataContext from "../ContextAPI/dataContext";
+import DataContext from "../Context/dataContext";
 
 const Balance = () => {
   const navigate = useNavigate();

@@ -6,7 +6,7 @@ import BodyBg from "./bodyBg";
 import checkIcon from "../../assets/check-lg.svg";
 import refreshIcon from "../../assets/refresh.svg";
 import { useNavigate } from "react-router-dom";
-import DataContext from "../ContextAPI/dataContext";
+import DataContext from "../Context/dataContext";
 
 const Processing = () => {
   const { selectedBalance } = useContext(DataContext);
