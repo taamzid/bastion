@@ -286,6 +286,23 @@ body .__form__body {
   border-radius: 100px !important;
 }
 
+.rotate {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 767px) {
   .progress {
     --bs-progress-height: 12px !important;

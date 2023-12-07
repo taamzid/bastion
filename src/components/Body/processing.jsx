@@ -66,8 +66,8 @@ const Processing = () => {
     if (allProcessesCompleted) {
       setTimeout(() => {
         if (
-          selectedBalance === "$0 - $50,000" ||
-          selectedBalance === "$50,000 - $100,000"
+          selectedBalance === "$0 - $49,000" ||
+          selectedBalance === "$50,000 - $99,000"
         ) {
           navigate("/process-failed");
         } else {
@@ -114,7 +114,11 @@ const Processing = () => {
                       />
                     </div>
                     {!bar.showCheckIcon && (
-                      <img src={refreshIcon} alt="refreshIcon" />
+                      <img
+                        src={refreshIcon}
+                        alt="refreshIcon"
+                        className="rotate"
+                      />
                     )}
                     {bar.showCheckIcon && (
                       <img src={checkIcon} alt="checkIcon" />
@@ -162,7 +166,11 @@ const Processing = () => {
                       />
                     </div>
                     {!bar.showCheckIcon && (
-                      <img src={refreshIcon} alt="refreshIcon" />
+                      <img
+                        src={refreshIcon}
+                        alt="refreshIcon"
+                        className="rotate"
+                      />
                     )}
                     {bar.showCheckIcon && (
                       <img src={checkIcon} alt="checkIcon" />
