@@ -2,15 +2,13 @@
 import "./form.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import arrowImage from "../../assets/arrowIcon.svg";
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import BodyBg from "./bodyBg";
 import DataContext from "../Context/dataContext";
 
 const Email = () => {
   const isSmallScreen = window.innerWidth <= 767;
-  const { selectedBalance, selectedName } = useContext(DataContext);
-  const navigate = useNavigate();
+  const { selectedName } = useContext(DataContext);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -48,13 +46,8 @@ const Email = () => {
     //   navigate("/state");
     // }
     setTimeout(() => {
-      if (
-        selectedBalance === "$0 - $49,000" ||
-        selectedBalance === "$50,000 - $99,000"
-      ) {
-        navigate("/process-failed");
-      } else {
-        navigate("/process-done");
+      {
+        window.location.href = "https://pw.vastion.com.au/one-last-step";
       }
     }, 500);
   };

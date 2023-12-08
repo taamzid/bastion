@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef, useState } from "react";
 import "./form.css";
 import arrowImage from "../../assets/arrowIcon.svg";

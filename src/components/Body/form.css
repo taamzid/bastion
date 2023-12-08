@@ -341,7 +341,7 @@ body .__form__body {
   .__select {
     font-size: 22px;
     margin-top: 32px;
-    font-family: "Cera Pro";
+    font-family: "Inter", sans-serif;
   }
 
   .__almost {

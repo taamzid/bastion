@@ -65,8 +65,15 @@ const Processing = () => {
   useEffect(() => {
     if (allProcessesCompleted) {
       setTimeout(() => {
-        navigate("/name");
-      }, 500);
+        if (
+          selectedBalance === "$0 - $49,000" ||
+          selectedBalance === "$50,000 - $99,000"
+        ) {
+          window.location.href = "https://pw.vastion.com.au/thank-you";
+        } else {
+          navigate("/name");
+        }
+      }, 200);
     }
   }, [allProcessesCompleted, navigate, selectedBalance]);
 
