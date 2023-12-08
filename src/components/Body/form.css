@@ -84,7 +84,7 @@ body .__form__body {
   max-height: 100px;
 }
 
-.__options.selected {
+.__options.selected, .__options__balance.selected {
   background-color: #fdfbf7;
   color: #23322c;
   border: 1px solid #23322c;
@@ -92,7 +92,6 @@ body .__form__body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: #23322c 1 px solid;
   font-size: 16px;
 }
 
@@ -142,16 +141,6 @@ body .__form__body {
   color: #fff;
   text-align: center;
   cursor: pointer;
-}
-
-.__options__balance.selected {
-  background-color: #fdfbf7;
-  color: #23322c;
-  border: 1px solid #23322c;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
 }
 
 .__why {
@@ -358,6 +347,12 @@ body .__form__body {
     background-color: #23322c;
     color: #fff;
     border: none;
+  }
+
+  .__options.selected, __options__balance.selected {
+    background-color: #fdfbf7;
+    color: #23322c;
+    border: 1px solid #23322c;
   }
 
   .__arrowIcon {
