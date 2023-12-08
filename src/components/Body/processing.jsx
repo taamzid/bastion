@@ -65,14 +65,7 @@ const Processing = () => {
   useEffect(() => {
     if (allProcessesCompleted) {
       setTimeout(() => {
-        if (
-          selectedBalance === "$0 - $49,000" ||
-          selectedBalance === "$50,000 - $99,000"
-        ) {
-          navigate("/process-failed");
-        } else {
-          navigate("/process-done");
-        }
+        navigate("/name");
       }, 500);
     }
   }, [allProcessesCompleted, navigate, selectedBalance]);

@@ -20,6 +20,7 @@ const Balance = () => {
       navigate("/age");
     }, 500);
   };
+
   return (
     <>
       {isSmallScreen ? (

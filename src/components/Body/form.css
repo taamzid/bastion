@@ -23,6 +23,14 @@ body .__form__body {
   text-align: center;
 }
 
+.__almost {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
 .__select__concern {
   font-size: 32px;
   font-weight: 700;
@@ -84,7 +92,8 @@ body .__form__body {
   max-height: 100px;
 }
 
-.__options.selected, .__options__balance.selected {
+.__options.selected,
+.__options__balance.selected {
   background-color: #fdfbf7;
   color: #23322c;
   border: 1px solid #23322c;
@@ -334,6 +343,12 @@ body .__form__body {
     font-family: "Cera Pro";
   }
 
+  .__almost {
+    font-size: 22px;
+    margin-top: 32px;
+    font-family: "Inter", sans-serif;
+  }
+
   .__options {
     background-color: #23322c;
     padding: 16px 56px;
@@ -349,7 +364,8 @@ body .__form__body {
     border: none;
   }
 
-  .__options.selected, .__options__balance.selected {
+  .__options.selected,
+  .__options__balance.selected {
     background-color: #fdfbf7;
     color: #23322c;
     border: 1px solid #23322c;

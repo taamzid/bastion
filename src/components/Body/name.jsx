@@ -1,13 +1,19 @@
 import "./form.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import arrowImage from "../../assets/arrowIcon.svg";
-import infoCircleIcon from "../../assets/infoCircleIcon.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 import BodyBg from "./bodyBg";
 
 const Name = () => {
   const isSmallScreen = window.innerWidth <= 767;
+  const navigate = useNavigate();
+
+  const handleDropdownOptionClick = () => {
+    setTimeout(() => {
+      navigate("/email");
+    }, 500);
+  };
+
   //   const navigate = useNavigate();
   //   const [age, setAge] = useState("");
   //   const [isUnder18, setIsUnder18] = useState(false);
@@ -57,11 +63,10 @@ const Name = () => {
           </div>
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
-            <ProgressBar animated now={45} />
-            <div className="__select">
-              Almost done! <br /> Who do we address this review to
+            <ProgressBar animated now={100} />
+            <div className="__almost">
+              Almost Done! <br /> Who Do We Address This Review To?
             </div>
-
             <div className="__age__input">
               <input
                 // value={age}
@@ -73,28 +78,17 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
+                // value={lastName}
+                // onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
                 // onKeyPress={handleKeyPress}
               />
             </div>
-            {/* {isUnder18 && (
-              <div className="__error__message">
-                You must be 18 or older to proceed.
-              </div>
-            )}
-            {isNotNumber && (
-              <div className="__error__message">
-                Please enter a valid number.
-              </div>
-            )}
-            {isBlank && (
-              <div className="__error__message">Age can not be empty.</div>
-            )} */}
             <br />
-            <div className="__next">Next</div>
+            <div className="__next" onClick={handleDropdownOptionClick}>
+              Next
+            </div>
             <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
           </div>
         </>
@@ -103,12 +97,10 @@ const Name = () => {
           <BodyBg />
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
-            <ProgressBar animated now={45} />
-            <div className="__select">
-              Almost done! <br />
-              Who do we address this review to{" "}
+            <ProgressBar animated now={100} />
+            <div className="__almost">
+              Almost Done! <br /> Who Do We Address This Review To?
             </div>
-
             <div className="__age__input">
               <input
                 // value={age}
@@ -120,28 +112,19 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
+                // value={lastName}
+                // onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
                 // onKeyPress={handleKeyPress}
               />
             </div>
-            {/* {isUnder18 && (
-              <div className="__error__message">
-                You must be 18 or older to proceed.
-              </div> 
-            )}     
-                Please enter a valid number.
-              </div>
-            )}
-            {isBlank && (
-              <div className="__error__message">Age can not be empty.</div>
-            )} */}
             <br />
             <br />
             <br />
-            <div className="__next">Next</div>
+            <div className="__next" onClick={handleDropdownOptionClick}>
+              Next
+            </div>
             <img src={arrowImage} alt="arrowImage" className="__arrowIcon" />
           </div>
         </div>

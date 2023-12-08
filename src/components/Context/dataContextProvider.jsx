@@ -4,7 +4,6 @@ import DataContext from "./dataContext";
 
 const DataContextProvider = ({ children }) => {
   const [selectedBalance, setSelectedBalance] = useState("");
-
   const contextValue = {
     selectedBalance,
     setSelectedBalance,
