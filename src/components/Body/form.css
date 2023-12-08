@@ -349,7 +349,7 @@ body .__form__body {
     border: none;
   }
 
-  .__options.selected, __options__balance.selected {
+  .__options.selected, .__options__balance.selected {
     background-color: #fdfbf7;
     color: #23322c;
     border: 1px solid #23322c;
