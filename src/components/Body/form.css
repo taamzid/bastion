@@ -41,7 +41,8 @@ body .__form__body {
   cursor: pointer;
 }
 
-.__options:hover {
+.__options:hover,
+.__options__balance:hover {
   background-color: #fff;
   color: #23322c;
   border: 1px solid #23322c;
@@ -141,12 +142,6 @@ body .__form__body {
   color: #fff;
   text-align: center;
   cursor: pointer;
-}
-
-.__options__balance:hover {
-  background-color: #fff;
-  color: #23322c;
-  border: 1px solid #23322c;
 }
 
 .__options__balance.selected {
@@ -356,6 +351,13 @@ body .__form__body {
     font-size: 16px;
     font-weight: 500;
     font-family: "Cera Pro";
+  }
+
+  .__options:hover,
+  .__options__balance:hover {
+    background-color: #23322c;
+    color: #fff;
+    border: none;
   }
 
   .__arrowIcon {
