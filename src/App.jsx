@@ -6,12 +6,12 @@ import Balance from "./components/Body/balance";
 import Age from "./components/Body/age";
 import State from "./components/Body/state";
 import Concern from "./components/Body/concern";
+import Name from "./components/Body/name";
+import Email from "./components/Body/email";
 import Processing from "./components/Body/processing";
 import ProcessDone from "./components/Body/processDone";
 import ProcessFailed from "./components/Body/processFailed";
 import DataContextProvider from "./components/Context/dataContextProvider";
-import Name from "./components/Body/Name";
-import Email from "./components/Body/Email";
 
 function App() {
   return (
