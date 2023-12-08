@@ -41,6 +41,12 @@ body .__form__body {
   cursor: pointer;
 }
 
+.__options:hover {
+  background-color: #fff;
+  color: #23322c;
+  border: 1px solid #23322c;
+}
+
 .__select__options {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -137,6 +143,12 @@ body .__form__body {
   cursor: pointer;
 }
 
+.__options__balance:hover {
+  background-color: #fff;
+  color: #23322c;
+  border: 1px solid #23322c;
+}
+
 .__options__balance.selected {
   background-color: #fdfbf7;
   color: #23322c;
@@ -182,9 +194,10 @@ body .__form__body {
   padding: 20px 56px;
   background-color: #d5dad2;
   color: #23322c;
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 500;
   border: 1px solid #23322c;
+  font-family: "Inter", sans-serif;
 }
 
 .__next {
@@ -297,7 +310,7 @@ body .__form__body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -380,9 +393,10 @@ body .__form__body {
 
   .__input {
     padding: 20px 20px;
-    font-size: 16px;
+    font-size: 15px;
     width: 100%;
     font-family: "Cera Pro";
+    font-family: "Inter", sans-serif;
   }
 
   .__next {
