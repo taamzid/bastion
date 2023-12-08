@@ -5,12 +5,15 @@ import DataContext from "./dataContext";
 const DataContextProvider = ({ children }) => {
   const [selectedBalance, setSelectedBalance] = useState("");
   const [selectedName, setSelectedName] = useState("");
+  const [selectedLastName, setSelectedLastName] = useState("");
 
   const contextValue = {
     selectedBalance,
     setSelectedBalance,
     selectedName,
     setSelectedName,
+    selectedLastName,
+    setSelectedLastName,
   };
 
   return (

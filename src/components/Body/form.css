@@ -194,18 +194,19 @@ body .__form__body {
   font-family: "Inter", sans-serif;
 }
 
-.__next {
+button.__next {
   font-size: 20px;
   font-weight: 400;
   background-color: #38553c;
   color: #fff;
-  max-width: 241px;
+  width: 241px;
   min-height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   cursor: pointer;
+  border: none;
 }
 
 .__error__message {
@@ -413,10 +414,11 @@ body .__form__body {
     font-family: "Inter", sans-serif;
   }
 
-  .__next {
-    max-width: 100%;
+  button.__next {
+    width: 100%;
     min-height: 52px;
     font-family: "Cera Pro";
+    border: none;
   }
 
   .__select__options__state {

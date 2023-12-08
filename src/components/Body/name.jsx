@@ -9,13 +9,23 @@ import DataContext from "../Context/dataContext";
 const Name = () => {
   const isSmallScreen = window.innerWidth <= 767;
   const navigate = useNavigate();
-  const { setSelectedName } = useContext(DataContext);
+  const { setSelectedName, setSelectedLastName } = useContext(DataContext);
   const [lastName, setLastName] = useState();
+  const [firstName, setFirstName] = useState();
+  const [isBlank, setIsBlank] = useState(false);
+  const isAlpha = (str) => /^[a-zA-Z]+$/.test(str);
 
   const handleDropdownOptionClick = () => {
     setSelectedName(lastName);
+    setSelectedLastName(firstName);
     setTimeout(() => {
-      navigate("/email");
+      if (!isAlpha(firstName) || !isAlpha(lastName)) {
+        setIsBlank(true);
+      } else {
+        setIsBlank(false);
+        navigate("/email");
+      }
+      console.log("isBlank:", isBlank);
     }, 500);
   };
 
@@ -53,12 +63,6 @@ const Name = () => {
   //     }
   //   };
 
-  //   const handleKeyPress = (e) => {
-  //     if (e.key === "Enter") {
-  //       handleNextClick();
-  //     }
-  //   };
-
   return (
     <>
       {isSmallScreen ? (
@@ -76,11 +80,10 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 placeholder="First Name"
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
             <div className="__age__input">
@@ -89,9 +92,11 @@ const Name = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {isBlank && (
+              <div className="__error__message">Please input valid name.</div>
+            )}
             <br />
             <div className="__next" onClick={handleDropdownOptionClick}>
               Next
@@ -110,11 +115,10 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 placeholder="First Name"
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
             <div className="__age__input">
@@ -123,9 +127,11 @@ const Name = () => {
                 onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {isBlank && (
+              <div className="__error__message">Please input valid name.</div>
+            )}
             <br />
             <br />
             <br />
