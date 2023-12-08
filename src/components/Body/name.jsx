@@ -3,12 +3,17 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import { useNavigate } from "react-router-dom";
 import BodyBg from "./bodyBg";
+import { useContext, useState } from "react";
+import DataContext from "../Context/dataContext";
 
 const Name = () => {
   const isSmallScreen = window.innerWidth <= 767;
   const navigate = useNavigate();
+  const { setSelectedName } = useContext(DataContext);
+  const [lastName, setLastName] = useState();
 
   const handleDropdownOptionClick = () => {
+    setSelectedName(lastName);
     setTimeout(() => {
       navigate("/email");
     }, 500);
@@ -78,8 +83,8 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={lastName}
-                // onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
                 // onKeyPress={handleKeyPress}
@@ -112,8 +117,8 @@ const Name = () => {
             </div>
             <div className="__age__input">
               <input
-                // value={lastName}
-                // onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 placeholder="Last Name"
                 className="__input"
                 // onKeyPress={handleKeyPress}

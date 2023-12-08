@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import "./form.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import arrowImage from "../../assets/arrowIcon.svg";
@@ -8,7 +9,7 @@ import DataContext from "../Context/dataContext";
 
 const Email = () => {
   const isSmallScreen = window.innerWidth <= 767;
-  const { selectedBalance } = useContext(DataContext);
+  const { selectedBalance, selectedName } = useContext(DataContext);
   const navigate = useNavigate();
 
   // useEffect(() => {
@@ -75,8 +76,9 @@ const Email = () => {
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={100} />
             <div className="__almost">
-              Thanks, <br />
-              How Do We Get This To You?
+              Thanks {selectedName}!
+              <br />
+              Let's Arrange the Best Way to Deliver Your Personalised Review.
             </div>
 
             <div className="__age__input">
@@ -111,8 +113,9 @@ const Email = () => {
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={100} />
             <div className="__almost">
-              Thanks, <br />
-              How Do We Get This To You?
+              Thanks {selectedName}!
+              <br />
+              Let's Arrange the Best Way to Deliver Your Personalised Review.
             </div>
 
             <div className="__age__input">
