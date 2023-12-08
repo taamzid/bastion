@@ -83,7 +83,7 @@ const Email = () => {
               <input
                 // value={age}
                 // onChange={(e) => setAge(e.target.value)}
-                placeholder="Enter Your Email"
+                placeholder="Enter Your Best Email..."
                 className="__input"
                 onKeyPress={handleKeyPress}
               />
@@ -92,7 +92,7 @@ const Email = () => {
               <input
                 // value={age}
                 // onChange={(e) => setAge(e.target.value)}
-                placeholder="Contact Number"
+                placeholder="Enter Your Mobile..."
                 className="__input"
                 // onKeyPress={handleKeyPress}
               />
@@ -119,7 +119,7 @@ const Email = () => {
               <input
                 // value={age}
                 // onChange={(e) => setAge(e.target.value)}
-                placeholder="Enter Your Email"
+                placeholder="Enter Your Mobile..."
                 className="__input"
                 onKeyPress={handleKeyPress}
               />
@@ -128,7 +128,7 @@ const Email = () => {
               <input
                 // value={age}
                 // onChange={(e) => setAge(e.target.value)}
-                placeholder="Contact Number"
+                placeholder="Enter Your Mobile..."
                 className="__input"
                 onKeyPress={handleKeyPress}
               />

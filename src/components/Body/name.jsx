@@ -65,7 +65,9 @@ const Name = () => {
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={100} />
             <div className="__almost">
-              Almost Done! <br /> Who Do We Address This Review To?
+              Final Step! <br />
+              Who Should We Personalize This <br />
+              Review For?
             </div>
             <div className="__age__input">
               <input

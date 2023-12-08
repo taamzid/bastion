@@ -61,7 +61,7 @@ const Age = () => {
             <div className="__select">Please Enter Your Age</div>
             <div className="__why">
               <div className="__why__we">
-                <div>Why we need your age?</div>
+                <div>Reason for needing your age</div>
                 <img src={infoCircleIcon} alt="infoCircleIcon" />
               </div>
             </div>
@@ -104,7 +104,7 @@ const Age = () => {
             <div className="__select">Please Enter Your Age</div>
             <div className="__why">
               <div className="__why__we">
-                <div>Why we need your age?</div>
+                <div>Reason for needing your age</div>
                 <img src={infoCircleIcon} alt="infoCircleIcon" />
               </div>
             </div>

@@ -8,12 +8,10 @@ const BodyBg = () => {
   return (
     <>
       <div className="__is">
-        Is Your Super Fund Performing <br />
-        In 2023?
+        Is Your Super Fund Maximising <br />
+        Your Future?{" "}
       </div>
-      <div className="__claim">
-        Claim Your Free Superannuation Performance Review
-      </div>
+      <div className="__claim">Take Our Quick Super Review to Find Out!</div>
       {isSmallScreen ? (
         <>
           {/* <div className="__customers">
@@ -32,15 +30,15 @@ const BodyBg = () => {
           <div className="__cnt">
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>Compare Your Super</div>
+              <div>Free, Fast Super Check</div>
             </span>
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>No Cost, Obligation Free</div>
+              <div>Valuable Super Insight</div>
             </span>
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>Takes Less Than 60 Seconds</div>
+              <div>No Strings, Pure Clarity</div>
             </span>
           </div>
         </>
@@ -49,15 +47,15 @@ const BodyBg = () => {
           <div className="__cnt">
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>Compare Your Super</div>
+              <div>Free, Fast Super Check</div>
             </span>
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>No Cost, Obligation Free</div>
+              <div>Valuable Super Insight</div>
             </span>
             <span className="__compare">
               <img src={tickCircle} alt="tickCircle" />
-              <div>Takes Less Than 60 Seconds</div>
+              <div>No Strings, Pure Clarity</div>
             </span>
           </div>
           {/* <div className="__customers">
