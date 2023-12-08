@@ -28,14 +28,14 @@ const Concern = () => {
             <div style={{ marginTop: "10px" }}></div>
             <ProgressBar animated now={75} />
             <div className="__select__concern">
-              Whats The Most Concerning About Your Super?
+              What Worries You Most About Your Superannuation?
             </div>
             <div className="__select__options__concern">
               {[
-                "The fees I’m paying?",
-                "Is my fund performing?",
-                "Do I have last super?",
-                "All of the above",
+                "Unsure About Fund's Performance?",
+                "Have I Got Lost Super?",
+                "Concerned About High Fees?",
+                "All of These Resonate with Me",
               ].map((option, index) => (
                 <div
                   key={index}
@@ -61,14 +61,14 @@ const Concern = () => {
             <div style={{ marginTop: "10px" }}></div>
             <ProgressBar animated now={75} />
             <div className="__select__concern">
-              Whats The Most Concerning About Your Super?
+              What Worries You Most About Your Superannuation?
             </div>
             <div className="__select__options__concern">
               {[
-                "The fees I’m paying?",
-                "Is my fund performing?",
-                "Do I have last super?",
-                "All of the above",
+                "Unsure About Fund's Performance?",
+                "Have I Got Lost Super?",
+                "Concerned About High Fees?",
+                "All of These Resonate with Me",
               ].map((option, index) => (
                 <div
                   key={index}

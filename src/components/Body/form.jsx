@@ -129,7 +129,9 @@ const Form = () => {
   return (
     <div className="__form__body">
       <ProgressBar animated now={15} />
-      <div className="__select">Select Your Super Fund To Begin</div>
+      <div className="__select">
+        What's Your Current Super Balance Estimate?
+      </div>
       <div className="__select__options">
         {[
           "Australian Super",

@@ -27,7 +27,7 @@ const State = () => {
           <div className="__form__body">
             <div style={{ marginTop: "30px" }}></div>
             <ProgressBar animated now={60} />
-            <div className="__select">Please Select Your State</div>
+            <div className="__select">Please Choose Your State</div>
             <div className="__select__options__state">
               {["NSW", "VIC", "QLD", "ACT", "TAS", "SA", "WA", "NT"].map(
                 (option, index) => (
@@ -55,7 +55,7 @@ const State = () => {
           <div className="__form__body">
             <div style={{ marginTop: "30px" }}></div>
             <ProgressBar animated now={60} />
-            <div className="__select">Please Select Your State</div>
+            <div className="__select">Please Choose Your State</div>
             <div className="__select__options__state">
               {["NSW", "VIC", "QLD", "ACT", "TAS", "SA", "WA", "NT"].map(
                 (option, index) => (

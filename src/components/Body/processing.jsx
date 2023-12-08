@@ -17,13 +17,13 @@ const Processing = () => {
 
   const [allProcessesCompleted, setAllProcessesCompleted] = useState(false);
   const [progressBars, setProgressBars] = useState([
-    { label: "Processing answers", completed: 0, showCheckIcon: false },
+    { label: "Reviewing answers", completed: 0, showCheckIcon: false },
     {
-      label: "Analyzing fund, balance & age",
+      label: "Analysing Details",
       completed: 0,
       showCheckIcon: false,
     },
-    { label: "Determining eligibility", completed: 0, showCheckIcon: false },
+    { label: "Calculating eligibility", completed: 0, showCheckIcon: false },
   ]);
 
   useEffect(() => {
@@ -80,7 +80,7 @@ const Processing = () => {
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={90} />
-            <div className="__select">Processing...Hold Tight</div>
+            <div className="__select">Processing Your Eligibility</div>
             <div style={{ marginBottom: "40px" }}></div>
             <div
               style={{
@@ -132,7 +132,7 @@ const Processing = () => {
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={90} />
-            <div className="__select">Processing...Hold Tight</div>
+            <div className="__select">Processing Your Eligibility</div>
             <div style={{ marginBottom: "40px" }}></div>
             <div
               style={{
