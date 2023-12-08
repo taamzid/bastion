@@ -122,7 +122,7 @@ const Email = () => {
               <input
                 // value={age}
                 // onChange={(e) => setAge(e.target.value)}
-                placeholder="Enter Your Mobile..."
+                placeholder="Enter Your Best Email..."
                 className="__input"
                 onKeyPress={handleKeyPress}
               />
