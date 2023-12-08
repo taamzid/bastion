@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import DataContext from "./DataContext";
+import DataContext from "./dataContext";
 
 const DataContextProvider = ({ children }) => {
   const [selectedBalance, setSelectedBalance] = useState("");
