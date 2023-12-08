@@ -10,6 +10,8 @@ import Processing from "./components/Body/processing";
 import ProcessDone from "./components/Body/processDone";
 import ProcessFailed from "./components/Body/processFailed";
 import DataContextProvider from "./components/Context/dataContextProvider";
+import Name from "./components/Body/Name";
+import Email from "./components/Body/Email";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
             <Route path="/state" element={<State />} />
             <Route path="/concern" element={<Concern />} />
             <Route path="/processing" element={<Processing />} />
+            <Route path="/name" element={<Name />} />
+            <Route path="/email" element={<Email />} />
             <Route path="/process-done" element={<ProcessDone />} />
             <Route path="/process-failed" element={<ProcessFailed />} />
           </Routes>
