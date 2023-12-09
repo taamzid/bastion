@@ -101,10 +101,10 @@ const Age = () => {
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={45} />
-            <div className="__select">Please Enter Your Age?</div>
+            <div className="__select">Please Enter Your Age</div>
             <div className="__why">
               <div className="__why__we">
-                <div>Reason for needing your age</div>
+                <div>Reason for needing your age?</div>
                 <img src={infoCircleIcon} alt="infoCircleIcon" />
               </div>
             </div>
