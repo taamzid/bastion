@@ -3,7 +3,7 @@ import ProgressBar from "react-bootstrap/ProgressBar";
 import arrowImage from "../../assets/arrowIcon.svg";
 import infoCircleIcon from "../../assets/infoCircleIcon.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BodyBg from "./bodyBg";
 
 const Age = () => {
@@ -47,6 +47,18 @@ const Age = () => {
       handleNextClick();
     }
   };
+
+  useEffect(() => {
+    const handleBeforeUnload = (event) => {
+      event.returnValue = "";
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener("beforeunload", handleBeforeUnload);
+    };
+  }, []);
 
   return (
     <>

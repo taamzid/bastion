@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Body from "./components/Body/body";
 import Footer from "./components/Footer/footer";
 import NavBar from "./components/NavBar/navBar";
@@ -17,20 +12,8 @@ import Processing from "./components/Body/processing";
 import ProcessDone from "./components/Body/processDone";
 import ProcessFailed from "./components/Body/processFailed";
 import DataContextProvider from "./components/Context/dataContextProvider";
-import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    const handleBeforeUnload = (event) => {
-      event.returnValue = "";
-    };
-
-    window.addEventListener("beforeunload", handleBeforeUnload);
-
-    return () => {
-      window.removeEventListener("beforeunload", handleBeforeUnload);
-    };
-  }, []);
   return (
     <div>
       <Router>
@@ -47,7 +30,6 @@ function App() {
             <Route path="/email" element={<Email />} />
             <Route path="/process-done" element={<ProcessDone />} />
             <Route path="/process-failed" element={<ProcessFailed />} />
-            <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </DataContextProvider>
       </Router>
