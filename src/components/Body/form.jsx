@@ -131,7 +131,7 @@ const Form = () => {
     <div className="__form__body">
       <ProgressBar animated now={15} />
       <div className="__select">
-        What's Your Current Super Balance Estimate?
+        Choose Your Super Fund for a Tailored Analysis{" "}
       </div>
       <div className="__select__options">
         {[
@@ -166,7 +166,7 @@ const Form = () => {
         }}
         style={{ cursor: "pointer" }}
       >
-        <div>Please select other super funds here</div>
+        <div>Choose Your Super Fund for a Tailored Analysis</div>
         <img src={dropDown} alt="dropDown" />
       </div>
       {isDropdownVisible && (
