@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import "./form.css";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -11,38 +12,40 @@ const Email = () => {
   const { selectedName, selectedLastName } = useContext(DataContext);
   const [email, setEmail] = useState("");
   const [contact, setContact] = useState("");
+  const [countryCode, setCountryCode] = useState("+61");
+  const [emailError, setEmailError] = useState("");
+  const [contactError, setContactError] = useState("");
 
-  //   const [age, setAge] = useState("");
-  //   const [isUnder18, setIsUnder18] = useState(false);
-  //   const [isBlank, setIsBlank] = useState(false);
-  //   const [isNotNumber, setIsNotNumber] = useState(false);
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setEmailError("Email can not be empty.");
+      return false;
+    }
+    setEmailError("");
+    return true;
+  };
 
-  // const handleNextClick = () => {
-  //   // if (age.trim() === "") {
-  //   //   setIsBlank(true);
-  //   //   setIsUnder18(false);
-  //   //   setIsNotNumber(false);
-  //   //   return;
-  //   // }
-
-  //   // if (parsedAge < 18) {
-  //   //   setIsUnder18(true);
-  //   //   setIsNotNumber(false);
-  //   //   setIsBlank(false);
-  //   // } else {
-  //   //   setIsUnder18(false);
-  //   //   setIsNotNumber(false);
-  //   //   navigate("/state");
-  //   // }
-  //   // setTimeout(() => {
-  //   //   {
-  //   //     window.location.href = "https://pw.vastion.com.au/one-last-step";
-  //   //   }
-  //   // }, 500);
-  // };
+  const validateContact = () => {
+    const contactRegex = /^(\+\d{1,2}\s?)?(\d{1,4}\s?)?\d{4}\s?\d{4}$/;
+    if (!contactRegex.test(contact)) {
+      setContactError("Please enter a valid Australian phone number.");
+      return false;
+    }
+    setContactError("");
+    return true;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateEmail() || !validateContact()) {
+      return;
+    }
+
+    const fullContact = contact.startsWith("+")
+      ? contact
+      : countryCode + contact;
 
     const apiKey =
       "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IlNyNmJQM0ZXNU5DRmZBQWl6VndjIiwiY29tcGFueV9pZCI6IlJzc2N1RzVsOXZtaVpsRnFxSjdRIiwidmVyc2lvbiI6MSwiaWF0IjoxNzAxMTcxODg3ODI4LCJzdWIiOiJ1c2VyX2lkIn0.xioW50-Ja4sW_uW590MxN6VHVBCsaznDHg20OurFOiM";
@@ -51,7 +54,7 @@ const Email = () => {
 
     const formData = {
       email,
-      contact,
+      contact: fullContact,
       first_name: selectedLastName,
       last_name: selectedName,
     };
@@ -101,19 +104,21 @@ const Email = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Your Best Email..."
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {emailError && <div className="__error__message">{emailError}</div>}
             <div className="__age__input">
               <input
                 type="tel"
                 value={contact}
                 onChange={(e) => setContact(e.target.value)}
-                placeholder="Enter Your Mobile..."
+                placeholder={`(${countryCode}) Enter Your Mobile`}
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {contactError && (
+              <div className="__error__message">{contactError}</div>
+            )}
             <br />
             <button className="__next" type="submit">
               Next
@@ -135,28 +140,26 @@ const Email = () => {
 
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter Your Best Email..."
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {emailError && <div className="__error__message">{emailError}</div>}
             <div className="__age__input">
               <input
-                // value={age}
-                // onChange={(e) => setAge(e.target.value)}
                 type="tel"
                 value={contact}
                 onChange={(e) => setContact(e.target.value)}
-                placeholder="Enter Your Mobile..."
+                placeholder={`(${countryCode}) Enter Your Mobile`}
                 className="__input"
-                // onKeyPress={handleKeyPress}
               />
             </div>
+            {contactError && (
+              <div className="__error__message">{contactError}</div>
+            )}
             <br />
             <br />
             <button className="__next" type="submit">

@@ -10,58 +10,31 @@ const Name = () => {
   const isSmallScreen = window.innerWidth <= 767;
   const navigate = useNavigate();
   const { setSelectedName, setSelectedLastName } = useContext(DataContext);
-  const [lastName, setLastName] = useState();
-  const [firstName, setFirstName] = useState();
+  const [lastName, setLastName] = useState("");
+  const [firstName, setFirstName] = useState("");
   const [isBlank, setIsBlank] = useState(false);
+  const [isValid, setIsValid] = useState(false);
   const isAlpha = (str) => /^[a-zA-Z]+$/.test(str);
 
   const handleDropdownOptionClick = () => {
     setSelectedName(lastName);
     setSelectedLastName(firstName);
     setTimeout(() => {
-      if (!isAlpha(firstName) || !isAlpha(lastName)) {
+      if (firstName.trim() === "" || lastName.trim() === "") {
         setIsBlank(true);
+        setIsValid(false);
+        return;
+      }
+      if (!isAlpha(firstName) || !isAlpha(lastName)) {
+        setIsValid(true);
+        setIsBlank(false);
       } else {
         setIsBlank(false);
+        setIsValid(false);
         navigate("/email");
       }
-      console.log("isBlank:", isBlank);
     }, 500);
   };
-
-  //   const navigate = useNavigate();
-  //   const [age, setAge] = useState("");
-  //   const [isUnder18, setIsUnder18] = useState(false);
-  //   const [isBlank, setIsBlank] = useState(false);
-  //   const [isNotNumber, setIsNotNumber] = useState(false);
-
-  //   const handleNextClick = () => {
-  //     if (age.trim() === "") {
-  //       setIsBlank(true);
-  //       setIsUnder18(false);
-  //       setIsNotNumber(false);
-  //       return;
-  //     }
-
-  //     const parsedAge = parseInt(age, 10);
-
-  //     if (isNaN(parsedAge)) {
-  //       setIsNotNumber(true);
-  //       setIsBlank(false);
-  //       setIsUnder18(false);
-  //       return;
-  //     }
-
-  //     if (parsedAge < 18) {
-  //       setIsUnder18(true);
-  //       setIsNotNumber(false);
-  //       setIsBlank(false);
-  //     } else {
-  //       setIsUnder18(false);
-  //       setIsNotNumber(false);
-  //       navigate("/state");
-  //     }
-  //   };
 
   return (
     <>
@@ -94,8 +67,11 @@ const Name = () => {
                 className="__input"
               />
             </div>
-            {isBlank && (
+            {isValid && (
               <div className="__error__message">Please input valid name.</div>
+            )}
+            {isBlank && (
+              <div className="__error__message">Name can not be empty.</div>
             )}
             <br />
             <div className="__next" onClick={handleDropdownOptionClick}>
@@ -129,8 +105,11 @@ const Name = () => {
                 className="__input"
               />
             </div>
-            {isBlank && (
+            {isValid && (
               <div className="__error__message">Please input valid name.</div>
+            )}
+            {isBlank && (
+              <div className="__error__message">Name can not be empty.</div>
             )}
             <br />
             <br />
