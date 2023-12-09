@@ -194,6 +194,21 @@ body .__form__body {
   font-family: "Inter", sans-serif;
 }
 
+.__next {
+  font-size: 20px;
+  font-weight: 400;
+  background-color: #38553c;
+  color: #fff;
+  width: 241px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+}
+
 button.__next {
   font-size: 20px;
   font-weight: 400;
@@ -412,6 +427,13 @@ button.__next {
     width: 100%;
     font-family: "Cera Pro";
     font-family: "Inter", sans-serif;
+  }
+
+  .__next {
+    width: 100%;
+    min-height: 52px;
+    font-family: "Cera Pro";
+    border: none;
   }
 
   button.__next {
