@@ -11,7 +11,7 @@ const BodyBg = () => {
         Is Your Super Fund Maximising <br />
         Your Future?{" "}
       </div>
-      <div className="__claim">Take Our Quick Super Review to Find Out!</div>
+      <div className="__claim">Take Our Quick Super Review Quiz to Find Out!</div>
       {isSmallScreen ? (
         <>
           {/* <div className="__customers">
