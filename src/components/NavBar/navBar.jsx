@@ -1,5 +1,5 @@
 import "./navBar.css";
-import vastionLogo from "../../assets/vastion__logo.svg";
+import vastionLogo from "../../assets/VASTION-PW-GREEN 1.svg";
 import { Link } from "react-router-dom";
 
 const NavBar = () => {

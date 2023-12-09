@@ -31,7 +31,9 @@ const Balance = () => {
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={30} />
-            <div className="__select">Select Your Estimated Super Balance</div>
+            <div className="__select">
+              What's Your Current Super Balance Estimate?
+            </div>
             <div className="__select__options">
               {[
                 "$0 - $49,000",
@@ -64,7 +66,9 @@ const Balance = () => {
           <div className="__form__body">
             <div style={{ marginTop: "20px" }}></div>
             <ProgressBar animated now={30} />
-            <div className="__select">Select Your Estimated Super Balance</div>
+            <div className="__select">
+              What's Your Current Super Balance Estimate?
+            </div>
             <div className="__select__options">
               {[
                 "$0 - $49,000",

@@ -1,5 +1,5 @@
 import "./footer.css";
-import logoImage from "../../assets/logo3.svg";
+import logoImage from "../../assets/VASTION-PW-WHITE 1.svg";
 
 const Footer = () => {
   return (
@@ -9,11 +9,13 @@ const Footer = () => {
       </div>
       <div className="__vastion">Vastion Private Wealth PTY LTD © 2023</div>
       <div className="__vastion__private">
-        Vastion Private Wealth PTY LTD{" "}
-        <span className="__span">(ABN: 19 673 234 181)</span> is a Corporate
-        Authorised Representative of Superfast AM Pty Ltd{" "}
-        <span className="__span">(ACN: 111 281 013; AFSL No. 283 043)</span>.{" "}
-        <br /> <br />
+        Vastion Private Wealth PTY LTD (ABN: 19 673 234 181) is a Corporate
+        Authorised
+        <br />
+        Representative of New Horizons Financial Services Pty Ltd (ABN: 63 638
+        401 117; AFSL No. 522 392)
+        <br />
+        <br />
         The information provided on and made available through this website is
         general in nature and has been prepared without taking into account your
         objectives, financial situation <br /> or needs – it may not be
