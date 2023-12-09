@@ -16,7 +16,7 @@ import DataContextProvider from "./components/Context/dataContextProvider";
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename="/">
         <DataContextProvider>
           <NavBar />
           <Routes>
