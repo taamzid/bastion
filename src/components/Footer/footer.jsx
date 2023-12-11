@@ -1,11 +1,17 @@
 import "./footer.css";
 import logoImage from "../../assets/VASTION-PW-WHITE 1.svg";
+import footerlogoImage from "../../assets/footerNewLogo.svg";
 
 const Footer = () => {
+  const isSmallScreen = window.innerWidth <= 767;
   return (
     <div className="__footer">
       <div className="__logo__div">
-        <img src={logoImage} alt="Logo" />
+        {isSmallScreen ? (
+          <img src={footerlogoImage} alt="Logo" />
+        ) : (
+          <img src={logoImage} alt="Logo" />
+        )}
       </div>
       <div className="__vastion">Vastion Private Wealth PTY LTD © 2023</div>
       <div className="__vastion__private">
