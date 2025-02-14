@@ -16,7 +16,7 @@ import DataContextProvider from "./components/Context/dataContextProvider";
 function App() {
   return (
     <div>
-      <Router>
+      {/* <Router>
         <DataContextProvider>
           <NavBar />
           <Routes>
@@ -33,7 +33,7 @@ function App() {
           </Routes>
         </DataContextProvider>
       </Router>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
